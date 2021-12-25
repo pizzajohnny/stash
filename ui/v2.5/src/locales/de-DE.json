@@ -265,6 +265,8 @@
       "number_of_parallel_task_for_scan_generation_head": "Anzahl paralleler Tasks für Scan/Generierung",
       "parallel_scan_head": "Paralleler Scan/Generierung",
       "preview_generation": "Vorschau-Generierung",
+      "scraper_proxy_url": "Scraper HTTP Proxy URL",
+      "scraper_proxy_url_desc": "HTTP Proxy der währned Scrape-HTTP-Anfragen verwendet wird",
       "scraper_user_agent": "Scraper-Benutzeragent",
       "scraper_user_agent_desc": "User-Agent-String, der während Scrape-HTTP-Anfragen verwendet wird",
       "scraping": "Durchsuchen",

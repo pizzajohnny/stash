@@ -325,6 +325,14 @@ export const SettingsScrapingPanel: React.FC = () => {
 
       <SettingSection headingID="config.general.scraping">
         <StringSetting
+          id="scraperProxyUrl"
+          headingID="config.general.scraper_proxy_url"
+          subHeadingID="config.general.scraper_proxy_url_desc"
+          value={scraping.scraperProxyUrl ?? undefined}
+          onChange={(v) => saveScraping({ scraperProxyUrl: v})}
+        />
+
+        <StringSetting
           id="scraperUserAgent"
           headingID="config.general.scraper_user_agent"
           subHeadingID="config.general.scraper_user_agent_desc"
