@@ -99,6 +99,8 @@ input ConfigGeneralInput {
   imageExcludes: [String!]
   """Custom Performer Image Location"""
   customPerformerImageLocation: String
+  """Scraper proxy Url. Proxy used for scraping"""
+  scraperProxyUrl: String @deprecated(reason: "use mutation ConfigureScraping(input: ConfigScrapingInput) instead")
   """Scraper user agent string"""
   scraperUserAgent: String @deprecated(reason: "use mutation ConfigureScraping(input: ConfigScrapingInput) instead")
   """Scraper CDP path. Path to chrome executable or remote address"""
@@ -180,6 +182,8 @@ type ConfigGeneralResult {
   imageExcludes: [String!]!
   """Custom Performer Image Location"""
   customPerformerImageLocation: String
+  """Scraper proxy Url. Proxy used for scraping"""
+  scraperProxyUrl: String @deprecated(reason: "use mutation ConfigureScraping(input: ConfigScrapingInput) instead")
   """Scraper user agent string"""
   scraperUserAgent: String @deprecated(reason: "use ConfigResult.scraping instead")
   """Scraper CDP path. Path to chrome executable or remote address"""
@@ -314,6 +318,8 @@ type ConfigDLNAResult {
 }
 
 input ConfigScrapingInput {
+  """Scraper proxy Url. Proxy used for scraping"""
+  scraperProxyUrl: String
   """Scraper user agent string"""
   scraperUserAgent: String
   """Scraper CDP path. Path to chrome executable or remote address"""
@@ -325,6 +331,8 @@ input ConfigScrapingInput {
 }
 
 type ConfigScrapingResult {
+  """Scraper proxy Url. Proxy used for scraping"""
+  scraperProxyUrl: String
   """Scraper user agent string"""
   scraperUserAgent: String
   """Scraper CDP path. Path to chrome executable or remote address"""

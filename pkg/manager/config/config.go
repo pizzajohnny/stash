@@ -94,6 +94,7 @@ const (
 
 	// scraping options
 	ScrapersPath              = "scrapers_path"
+	ScraperProxyUrl           = "scraper_proxy_url"
 	ScraperUserAgent          = "scraper_user_agent"
 	ScraperCertCheck          = "scraper_cert_check"
 	ScraperCDPPath            = "scraper_cdp_path"
@@ -516,6 +517,10 @@ func (i *Instance) GetVideoFileNamingAlgorithm() models.HashAlgorithm {
 
 func (i *Instance) GetScrapersPath() string {
 	return i.getString(ScrapersPath)
+}
+
+func (i *Instance) GetScraperProxyUrl() string {
+	return i.getString(ScraperProxyUrl)
 }
 
 func (i *Instance) GetScraperUserAgent() string {

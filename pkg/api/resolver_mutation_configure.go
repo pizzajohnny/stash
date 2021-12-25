@@ -247,6 +247,11 @@ func (r *mutationResolver) ConfigureGeneral(ctx context.Context, input models.Co
 		initialiseCustomImages()
 	}
 
+	if input.ScraperProxyURL != nil {
+		c.Set(config.ScraperProxyUrl, input.ScraperProxyURL)
+		refreshScraperCache = true
+	}
+
 	if input.ScraperUserAgent != nil {
 		c.Set(config.ScraperUserAgent, input.ScraperUserAgent)
 		refreshScraperCache = true
